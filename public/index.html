@@ -4,51 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-    <title>Realtime Chat</title>
+    <title>Chat App</title>
+    <link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+		crossorigin="anonymous"
+	/>
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
+    <div class="join-container"
     <header class="join-header">
-        <nav class="navbar">
-            <h1 id= "title" class="active"><i class="material-symbols-outlined">chat</i> Realtime Chat</h1>
-            <div class="topnav-right">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </nav>
+        <h1><i class="fas fa-smile"></i> ChatApp</h1>
       </header>
-      <main class="container">
-        <section class="row align-items-center">
-          <div class="">
-            <h1 class="main-text">Have the best chat</h1>
-            <p class="subtext">Fast, simple, free chat app for everyone</p>
-          </div>
-          <div class="">
-            <img class src="/public/images/people-chatting.png" alt="people messaging">
-        </div>
-          <div class="">
-            <form class="login-form" action="chat.html">
-                <div class="form-control">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter username..." required/>
-                </div>
-                <div class="form-control">
-                    <label for="room">Room</label>
+    <main class="join-main">
+        <form action="chat.html">
+            <div class="form-control">
+                <label for="username">Username</label>
+                    <input
+                        type="text"
+                        name="username"
+                        id="username"
+                        placeholder="Enter username..."
+                        required
+                    />
+            </div>
+            <div class="form-control">
+                <label for="room">Room</label>
                     <select name="room" id="room">
                         <option value="Main">Main</option>
                         <option value="HTML">HTML</option>
 						<option value="CSS">CSS</option>
 						<option value="Javascript">Javascript</option>
                     </select>
-                </div>
-                <button type="submit" class="btn">Join Chat</button>
-            </form>
-          </div>
-        </section>
-      </main>
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+        </form>
+    </main>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
