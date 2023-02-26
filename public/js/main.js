@@ -4,12 +4,15 @@ const roomName = document.getElementById('room-name');
 const userList = document.getElementById('users');
 
 //get username and room from URL
-const { username,room } = Qs.parse(location.search, {
-    ignoreQueryPrefix: true
-});
-console.log(username, room);
+//qs.parse takes in url and returns object with username and room
+const { username, room } = Qs.parse(location.search, {
+    // ignore ? in url
+    ignoreQueryPrefix: true,
+  });
+// console.log(username, room);
 
 const socket = io();
+
 //join chatroom
 socket.emit('joinRoom', { username, room });
 
