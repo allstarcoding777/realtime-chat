@@ -11,7 +11,7 @@ const io = socketio(server);
 
 //static folder
 app.use(express.static(path.join(__dirname + '/public')));
-const chatBot = 'ChatApp Bot';
+const chatBot = 'Chat Bot';
 //run when client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({ username, room }) => {
@@ -21,7 +21,7 @@ io.on('connection', socket => {
         socket.join(user.room);
 
         //welcome current user
-    socket.emit('message', formatMessage(chatBot, 'Welcome to ChatApp!'));
+    socket.emit('message', formatMessage(chatBot, 'Welcome!'));
 
     //broadcasts when a user connects to a specific room
     socket.broadcast.to(user.room).emit(
