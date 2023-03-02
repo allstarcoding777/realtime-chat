@@ -10,20 +10,20 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <header class="chat-header">
-          <h1 id="chat-title"><i class="chat-icon material-symbols-outlined">chat</i>Realtime Chat</h1>
-          <a href="index.html" id="leaveBtn" class="btn">Leave Chat</a>
-        </header>
-        <main class="chat-main">
-          <div class="chat-sidebar">
+  <header class="chat-header">
+    <h1 id="chat-title"><i class="chat-icon material-symbols-outlined">chat</i>Realtime Chat</h1>
+    <a href="index.html" id="leaveBtn" class="btn">Leave Chat</a>
+  </header>
+  <main class="chat-container">
+        <section class="chat-main">
+          <section class="chat-sidebar">
             <img id="chat-logo" class src="./images/chat-logo.png" alt="chat logo">
             <h2 id="room-heading"><i class="fas fa-comments"></i> Room Name:</h2>
             <h3 id="room-name"></h3>
             <h2 id="users-heading"><i class="fas fa-users"></i> Users:</h2>
             <ul id="users"></ul>
-            </div>
-            <div class="chat-messages">
+            </section>
+            <section class="chat-messages">
             </main class="chat-form-container">
             <form id="chat-form">
               <input
@@ -34,15 +34,16 @@
               autocomplete="off"
               />
               <button type="submit" id="sendBtn" class="btn">Send</button>
-            </div> 
+            </section> 
           </form>
-        </div>
-    </div>
+          </section>
+      </main>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <!--query string library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js" 
     integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- socket.io library -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
 </body>

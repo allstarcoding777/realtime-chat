@@ -11,7 +11,10 @@ const io = socketio(server);
 
 //static folder
 app.use(express.static(path.join(__dirname + '/public')));
+
+//sets variable for chat bot
 const chatBot = 'Chat Bot';
+
 //run when client connects
 io.on('connection', socket => {
     socket.on('joinRoom', ({ username, room }) => {
@@ -20,7 +23,7 @@ io.on('connection', socket => {
         //join user to room
         socket.join(user.room);
 
-        //welcome current user
+    //welcome current user
     socket.emit('message', formatMessage(chatBot, 'Welcome!'));
 
     //broadcasts when a user connects to a specific room
@@ -45,13 +48,12 @@ io.on('connection', socket => {
     socket.on('disconnect', () => {
         //get user that left
         const user = userLeave(socket.id);
-
         if(user) {
             io.to(user.room).emit(
                 'message', formatMessage(chatBot, `${user.username} has left the chat`)
             );
 
-            //send users and room info
+      //send users and room info
         io.to(user.room).emit('roomUsers', {
         room: user.room,
         users: getRoomUsers(user.room)
