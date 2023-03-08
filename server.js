@@ -64,10 +64,6 @@ io.on('connection', socket => {
 });
 
 //set port
-const PORT =  process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 //listen on port
 server.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-
-// app.listen(process.env.PORT || 3000, function() {
-//     console.log("Server has started");
-// });
