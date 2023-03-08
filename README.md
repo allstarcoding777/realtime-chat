@@ -10,7 +10,7 @@ On the homepage, create a username, choose which room you would like to join fro
 
 ![webpage screenshot](public/images/webpage-screenshot.png)
 
-https://github.com/allstarcoding777/realtime-chat
+https://allstarcoding777.github.io/realtime-chat/
 
 ## License
 
