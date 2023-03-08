@@ -1,4 +1,4 @@
- # <realtime-chat>
+<realtime-chat>
 
 ## Description
 
@@ -10,7 +10,7 @@ On the homepage, create a username, choose which room you would like to join fro
 
 ![webpage screenshot](public/images/webpage-screenshot.png)
 
-https://allstarcoding777.github.io/realtime-chat/
+Deployed Website Link: https://realtime-chat-777.herokuapp.com/
 
 ## License
 
