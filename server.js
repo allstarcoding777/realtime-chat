@@ -3,6 +3,7 @@ const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
 const formatMessage = require('./utils/messages');
+const env = require('dotenv').config();
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
 
 const app = express();
@@ -62,5 +63,11 @@ io.on('connection', socket => {
     });
 });
 
+//set port
 const PORT = 3000 || process.env.PORT;
+//listen on port
 server.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+// app.listen(process.env.PORT || 3000, function() {
+//     console.log("Server has started");
+// });
