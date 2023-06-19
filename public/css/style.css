@@ -144,12 +144,10 @@ margin-top: -100px;
 
 #msg {
   margin-left: 500px;
-  /* width: 850px;
-  height: 30px; */
   border-radius: 1px;
 }
 
-/* mobile responsive */
+/* mobile responsive on 600px size screens */
 @media only screen and (max-width: 600px) {
   .login-form {
     margin-top: 20px;
@@ -161,17 +159,14 @@ margin-top: -100px;
    #leaveBtn  {
     margin-top: 20px;
   }
-  /* shrink chat page to fit screen */
   #msg {
     margin-left: 20px;
     margin-top: 100px ;
   }
-  /* move meta and text to middle of page on mobile */
   .chat-messages {
     margin-top: 70px;
     margin-left: 20px;
   }
-  /* make elements of chat page smaller */
   #room-heading{
     margin-top:-50px;
     font-size: 15px;
@@ -179,7 +174,9 @@ margin-top: -100px;
   #users-heading, #room-name {
     font-size: 15px;
   }
-
+  #users {
+    margin-bottom: -35px;
+  }
   #chat-logo {
     width: 200px;
     height: 200px;
