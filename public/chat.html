@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Chat</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Chat</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
+
 <body>
   <header class="chat-header">
     <h1 id="chat-title"><i class="chatroom-header chat-icon material-symbols-outlined">chat</i>Realtime Chat</h1>
     <a href="index.html" id="leaveBtn" class="btn">Leave Chat</a>
   </header>
   <main class="chat-container">
-        <section class="chat-main">
-          <section class="chat-sidebar">
-            <img id="chat-logo" class src="./images/chat-logo.png" alt="chat logo">
-            <h2 id="room-heading"><i class="fas fa-comments"></i> Room Name:</h2>
-            <h3 id="room-name"></h3>
-            <h2 id="users-heading"><i class="fas fa-users"></i> Users:</h2>
-            <ul id="users"></ul>
-            </section>
-            <section class="chat-messages">
-            </main class="chat-form-container">
-            <form id="chat-form">
-              <input
-              id="msg"
-              type="text"
-              placeholder="Enter Message"
-              required
-              autocomplete="off"
-              />
-              <button type="submit" id="sendBtn" class="btn">Send</button>
-            </section> 
-          </form>
-          </section>
-      </main>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <!--query string library-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js" 
-    integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng==" 
+    <section class="chat-main">
+      <section class="chat-sidebar">
+        <img id="chat-logo" class src="./images/chat-logo.png" alt="chat logo">
+        <h2 id="room-heading"><i class="fas fa-comments"></i> Room Name:</h2>
+        <h3 id="room-name"></h3>
+        <h2 id="users-heading"><i class="fas fa-users"></i> Users:</h2>
+        <ul id="users"></ul>
+      </section>
+      <section class="chat-messages">
+      </section>
+      <form id="chat-form">
+        <input id="msg" type="text" placeholder="Enter Message" required autocomplete="off" />
+        <button type="submit" id="sendBtn" class="btn">Send</button>
+      </form>
+  </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <!--query string library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.min.js"
+    integrity="sha512-/l6vieC+YxaZywUhmqs++8uF9DeMvJE61ua5g+UK0TuHZ4TkTgB1Gm1n0NiA86uEOM9JJ6JUwyR0hboKO0fCng=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- socket.io library -->
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/main.js"></script>
+  <!-- socket.io library -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
